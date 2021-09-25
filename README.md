@@ -1,10 +1,11 @@
 # Hello
 
-> Typescript + Esbuild + Preact/JSX + Emotion + SVG loader + Prettier + Eslint + fetch polyfill
+> Click "Use this template" above
 
 ## Getting Started
 
-Click "Use this template" above
+Typescript + Esbuild + Preact/JSX + Emotion + SVG loader + Prettier + Eslint + fetch polyfill
+
 
 ```jsx
 // Build UI

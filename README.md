@@ -25,7 +25,7 @@ const buttonStyle = css`
 
 // Import svg file
 import HomeIcon from './home.svg'
-;<HomeIcon />
+render(<HomeIcon />, document.body)
 
 // Fetch polyfill
 const res = await fetch(url)

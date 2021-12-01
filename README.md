@@ -14,7 +14,7 @@ function Button() {
   const [conuter, setCounter] = useState(0)
   return <button onClick={() => setCounter(counter + 1)}>Click me! {counter}</button>
 }
-render(<Button />, document.body)
+render(<Button />, document.body)  // appendChild
 
 // insertBefore
 const target = document.querySelector('#target')

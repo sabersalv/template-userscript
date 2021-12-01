@@ -23,6 +23,7 @@ render(<Button />, div)
 target.parentNode.insertBefore(div.firstChild, target)
 
 // Style
+// You can replace Emotion with any CSS-in-JS, CSS Modules or Plain CSS file
 import { css } from '@emotion/css'
 const buttonStyle = css`
   color: blue;

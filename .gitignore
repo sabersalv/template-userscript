@@ -4,6 +4,7 @@
 !/.yarn/releases
 !/.yarn/sdks
 /.pnp.*
+yarn.lock
 node_modules
 .env
 /dist

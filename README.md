@@ -6,15 +6,21 @@
 
 Typescript + Esbuild + Preact/JSX + Emotion + SVG loader + Prettier + Eslint + fetch polyfill
 
-
 ```jsx
 // Build UI
-import { render, useState } from 'preact'
+import { render } from 'preact'
+import { useState  } from 'preact/hooks'
 function Button() {
   const [conuter, setCounter] = useState(0)
-  return <button onClick={() => setCounter(count + 1)}>Increase {counter}</button>
+  return <button onClick={() => setCounter(counter + 1)}>Click me! {counter}</button>
 }
 render(<Button />, document.body)
+
+// insertBefore
+const target = document.querySelector('#target')
+const div = document.createElement('div')
+render(<Button />, div)
+target.parentNode.insertBefore(div.firstChild, target)
 
 // Style
 import { css } from '@emotion/css'

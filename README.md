@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-Typescript + Esbuild + Preact/JSX + Emotion + SVG loader + Prettier + Eslint + fetch polyfill
+Typescript + Esbuild + Preact/JSX + React Hooks + Emotion + SVG loader + Prettier + Eslint + fetch polyfill
 
 ```jsx
 // Build UI

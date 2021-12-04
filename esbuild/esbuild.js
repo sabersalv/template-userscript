@@ -24,10 +24,10 @@ if (isDev) {
 let meta = fs
   .readFileSync(`${__dirname}/../src/meta.ts`)
   .toString()
-  .replaceAll(/APP_NAME/g, pkg.name)
-  .replaceAll(/DESCRIPTION/g, pkg.description)
-  .replaceAll(/VERSION/g, pkg.version)
-  .replaceAll(/AUTHOR/g, pkg.author)
+  .replace(/APP_NAME/g, pkg.name)
+  .replace(/DESCRIPTION/g, pkg.description)
+  .replace(/VERSION/g, pkg.version)
+  .replace(/AUTHOR/g, pkg.author)
 for (const [key, value] of Object.entries(define)) {
   meta = meta.replace(key, value)
 }
@@ -53,13 +53,23 @@ esbuild
     plugins: [
       svgr({
         svgoConfig: {
-          plugins: {
-            prefixIds: false,
-            removeViewBox: false,
-            addClassesToSVGElement: {
-              classNames: [pkg.name],
+          plugins: [
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  prefixIds: false,
+                  removeViewBox: false,
+                },
+              },
             },
-          },
+            {
+              name: "addClassesToSVGElement",
+              params: {
+                className: [pkg.name],
+              },
+            },
+          ],
         },
         plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
       }),

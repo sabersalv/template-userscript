@@ -47,6 +47,7 @@ esbuild
     minify: isProd,
     sourcemap: isDev && 'inline',
     banner: { js: meta },
+    inject: ['./esbuild/react-shim.js'],
     plugins: [
       svgr({
         svgoConfig: {

@@ -11,4 +11,6 @@ const Button = () => {
   )
 }
 
-render(<Button />, document.body)
+const app = document.createElement('div')
+document.body.appendChild(app)
+render(<Button />, app)

@@ -4,12 +4,12 @@
 
 ## Getting Started
 
-Typescript + Esbuild + Preact/JSX + React Hooks + Emotion + SVG loader + Prettier + Eslint + fetch polyfill
+Typescript, Esbuild, Preact/JSX, fetch polyfill, SVG loader, Emotion, Prettier, Eslint
 
 ```jsx
 // Build UI
-import { render } from 'preact'
-import { useState  } from 'preact/hooks'
+import { render } from 'react-dom'
+import { useState  } from 'react'
 function Button() {
   const [conuter, setCounter] = useState(0)
   return <button onClick={() => setCounter(counter + 1)}>Click me! {counter}</button>

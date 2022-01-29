@@ -1,8 +1,8 @@
 import './meta'
 import './polyfill'
 
-import { render } from 'preact'
-import { useState } from 'preact/hooks'
+import { render } from 'react-dom'
+import { useState } from 'react'
 
 const Button = () => {
   const [counter, setCounter] = useState(0)

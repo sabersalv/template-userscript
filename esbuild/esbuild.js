@@ -47,9 +47,6 @@ esbuild
     minify: isProd,
     sourcemap: isDev && 'inline',
     banner: { js: meta },
-    jsxFactory: 'h',
-    jsxFragment: 'Fragment',
-    inject: ['./esbuild/preact-shim.ts'],
     plugins: [
       svgr({
         svgoConfig: {
@@ -64,7 +61,7 @@ esbuild
               },
             },
             {
-              name: "addClassesToSVGElement",
+              name: 'addClassesToSVGElement',
               params: {
                 className: [pkg.name],
               },
